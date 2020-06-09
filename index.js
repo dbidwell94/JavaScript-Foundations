@@ -99,8 +99,8 @@ const MVP = false;
 
 const insertIntoHTML = (objectToInsert) => {
   console.log("test");
-  const mortgateHTMLContainer = document.getElementById("mortgate-output");
-  const toInsert = `<div class='mortgate-container'><p>${objectToInsert}</p></div>`;
+  const mortgateHTMLContainer = document.getElementById("mortgage-output");
+  const toInsert = `<div class='mortgage-container'><p>${objectToInsert}</p></div>`;
   mortgateHTMLContainer.innerHTML += toInsert;
 };
 
@@ -117,9 +117,9 @@ const variableInterestRate = (baseInterestRate, name) => {
     interestRate = interestRate + 0.005;
     const toString = `${
       mortgateRateObject.borrowerName
-    }, with an interest rate of ${interestRate.toFixed(
+    }: with an interest rate of ${interestRate.toFixed(
       3
-    )}, your monthly rate is $${mortgateRateObject.monthlyRate}`;
+    )}, your monthly rate is $${mortgateRateObject.monthlyRate.toFixed(2)}`;
     if (MVP) {
       console.log(toString);
     } else {
